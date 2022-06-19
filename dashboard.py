@@ -85,10 +85,10 @@ def histogram(hoverData):
     dff = df[df["ogc_fid"] == id]
     print(dff)
     # Use `hole` to create a donut-like pie chart
-    histogram = px.pie(dff, values='ogc_fid', names=['bcn_mate_1','bcn_mate_2'], color_discrete_sequence=px.colors.sequential.RdBu)
-    #histogram = px.histogram(dff, x='ogc_fid',
-                        #y=["bcn_mate_1","bcn_mate_2","bcn_mate_3","bcn_mate_4","bcn_mate_5","bcn_mate_6"],
-                        #labels={'ogc_fid':'building'},)
+    #histogram = px.pie(dff, values='ogc_fid', names=['bcn_mate_1','bcn_mate_2'], color_discrete_sequence=px.colors.sequential.RdBu)
+    histogram = px.histogram(dff, x='ogc_fid',
+                        y=["bcn_mate_1","bcn_mate_2","bcn_mate_3","bcn_mate_4","bcn_mate_5","bcn_mate_6"],
+                        labels={'ogc_fid':'building'},)
 
     return histogram
 
